@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title><%%= h(yield(:title) || "Untitled") %></title>
+	<%%= javascript_include_tag :defaults %>
+    <%%= stylesheet_link_tag '<%= file_name %>' %>
+    <%%= yield(:head) %>
+</head>
+
+<body>
+<!-- WRAP -->
+<div id='wrap'>
+<!-- HEADER -->
+<div id='header'>
+    <!-- LOGOBOX -->
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" >
+        <tr>
+            <td align="left" valign="middle">
+                <a href="/"><img src="/images/header_left.gif" alt=""/></a>
+            </td>
+            <td style="background-repeat:repeat-x; background-image:url(/images/header_banner.gif);" width="100%">
+                &nbsp;
+            </td>
+            <td align="right" valign="middle">
+                <img src="/images/header_right.gif" alt=""/>
+            </td>
+        </tr>
+    </table>                  	
+</div> <!-- HEADER -->
+
+<!-- NAVIGATION -->			
+<%%= navigation :main %>
+
+<!-- MAIN-BLOCK -->
+<div id='main-block'>
+	<%% tabnav :main do %>
+    <%%- if show_title? -%>
+      <h2 id='title'><%%=h yield(:title) %></h2>
+    <%%- end -%>
+	
+      <%%- flash.each do |name, msg| -%>
+        <%%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%%- end -%>
+<%%= yield %>
+<%% end %>
+</div> <!-- MAIN-BLOCK -->
+	
+<!-- FOOTER -->
+<div id="footer">
+    <a href="http://www.silake.com">SILAKE.COM</a>
+    &copy; 2009 
+</div>
+</div> <!--WRAP -->
+	
+</body>
+</html>
