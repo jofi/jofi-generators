@@ -1,0 +1,7 @@
+<%% title t('new_<%=singular_name%>') %>
+
+<%= render_form %>
+
+<%- if action? :index -%>
+	<p><%%= link_to t("list_all"), <%= plural_name %>_path %></p>
+<%- end -%>

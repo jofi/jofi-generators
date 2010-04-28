@@ -1,0 +1,25 @@
+<%% title t('activerecord.models.<%=singular_name%>').titleize  %>
+
+<%- for attribute in attributes -%>
+<p>
+  <strong><%%= t('activerecord.attributes.<%=singular_name%>.<%=attribute.name%>').titleize %>:</strong>
+  <%%=h @<%= singular_name %>.<%= attribute.name %> %>
+</p>
+<%- end -%>
+
+<p>
+<%- if action? :index -%>
+  <%%= link_to t('list_all'), <%= plural_name %>_path %>
+<%- end -%>
+</p>
+
+<p>
+<%% admin_area do %>
+	<%- if action? :edit -%>
+  		<%%= link_to t('edit'), edit_<%= singular_name %>_path(@<%= singular_name %>) %> |
+	<%- end -%>
+	<%- if action? :destroy -%>
+  		<%%= link_to t('destroy'), @<%= singular_name %>, :confirm => t('are_you_sure'), :method => :delete %>
+	<%- end -%>
+<%% end %>
+</p>

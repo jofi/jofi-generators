@@ -1,0 +1,14 @@
+<%% title t('edit_<%=singular_name%>') %>
+
+<%= render_form %>
+
+<%- if actions? :show, :index -%>
+<p>
+<%- if action? :show -%>
+  <%%= link_to t('show'), @<%= singular_name %> %> |
+<%- end -%>
+<%- if action? :index -%>
+  <%%= link_to t('list_all'), <%= plural_name %>_path %>
+<%- end -%>
+</p>
+<%- end -%>

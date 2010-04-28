@@ -1,0 +1,10 @@
+<%% form_for @<%= singular_name %> do |f| %>
+  <%%= f.error_messages %>
+<%- for attribute in attributes -%>
+  <p>
+  	<%%= f.label t('activerecord.attributes.<%=singular_name%>.<%=attribute.name%>').titleize %><br />
+    <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+  </p>
+<%- end -%>
+  <p><%%= f.submit t('submit') %></p>
+<%% end %>
