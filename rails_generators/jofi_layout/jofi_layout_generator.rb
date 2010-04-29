@@ -10,6 +10,7 @@ class JofiLayoutGenerator < Rails::Generator::Base
       m.directory 'public/stylesheets'
       m.directory 'public/images'
       m.directory 'app/helpers'
+      m.directory 'config/locales'
       
       if options[:haml]
         m.directory 'public/stylesheets/sass'
@@ -25,7 +26,7 @@ class JofiLayoutGenerator < Rails::Generator::Base
         m.file     "header_left.gif",  "public/images/header_left.gif"
         m.file     "header_right.gif",  "public/images/header_right.gif"
         m.file     "spinner.gif",  "public/images/header_banner.gif"
-        
+        m.file     "sk_jofi_layout.yml",  "config/locales/sk_jofi_layout.yml"        
       end
       m.file "helper.rb", "app/helpers/layout_helper.rb"
     end

@@ -1,7 +1,7 @@
   def update
     @<%= singular_name %> = <%= class_name %>.find(params[:id])
     if @<%= singular_name %>.update_attributes(params[:<%= singular_name %>])
-      flash[:notice] = t('update_successfull') + ': ' + t('activerecord.models.<%= name %>')   
+      flash[:notice] = t('update_successfull') + ': ' + t('activerecord.models.<%= singular_name %>')   
       # flash[:notice] = "Successfully updated <%= name.humanize.downcase %>."
       redirect_to <%= item_path('url') %>
     else

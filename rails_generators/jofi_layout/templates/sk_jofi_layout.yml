@@ -1,0 +1,26 @@
+sk:
+    new: Nový
+    edit: Upraviť
+    show: Zobraziť
+    destroy: Odstrániť
+    list: Zoznam
+    list_all: Zoznam
+    submit: Odoslať
+    close: Zavrieť
+    search: Hľadať
+    export: Exportovať
+    export_csv: CSV export
+    mantis_bugs: Chyby v Mantise
+    are_you_sure: Ste si istý? Táto operácia sa nedá vrátiť!
+    cancel: Zrušiť
+    creation_successfull: Objekt úspešne vytvorený
+    update_successfull: Objekt úspešne upravený
+    destroy_successfull: Objekt odstránený
+
+    # Model and Attribute names
+    activerecord:
+        models:                   
+        
+        attributes: 
+    
+    # General labels 
