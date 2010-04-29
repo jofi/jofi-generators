@@ -30,6 +30,10 @@ module LayoutHelper
 #    output.join("<br/>\n")
 #  end
   
+  def admin_logged_in?
+    true
+  end
+  
   def admin_area(&block)
     if admin_logged_in?
       concat(content_tag(:div, content_tag(:span, capture(&block), :class => 'admin_span'), :class => "admin_div"))
