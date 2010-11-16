@@ -10,7 +10,6 @@ sk:
     search: Hľadať
     export: Exportovať
     export_csv: CSV export
-    mantis_bugs: Chyby v Mantise
     are_you_sure: Ste si istý? Táto operácia sa nedá vrátiť!
     cancel: Zrušiť
     creation_successfull: Objekt úspešne vytvorený

@@ -1,9 +1,9 @@
 <%% title t('list_<%= plural_name %>') %>
 
-<table>
-  <tr class="list">
+<table class="list">
+  <tr>
   <%- for attribute in attributes -%>
-    <th><%%= t('activerecord.attributes.<%=singular_name%>.<%=attribute.name%>').titleize %></th>
+    <th><%%= t('activerecord.attributes.<%=singular_name%>.<%=attribute.name%>').capitalize %></th>
   <%- end -%>
   </tr>
   <%% for <%= singular_name %> in @<%= plural_name %> %>

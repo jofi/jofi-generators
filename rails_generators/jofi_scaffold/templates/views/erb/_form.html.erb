@@ -2,7 +2,7 @@
   <%%= f.error_messages %>
 <%- for attribute in attributes -%>
   <p>
-  	<%%= f.label t('activerecord.attributes.<%=singular_name%>.<%=attribute.name%>').titleize %><br />
+  	<%%= f.label t('activerecord.attributes.<%=singular_name%>.<%=attribute.name%>').capitalize %><br />
     <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
   </p>
 <%- end -%>
