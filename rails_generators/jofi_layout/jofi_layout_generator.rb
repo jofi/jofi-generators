@@ -25,7 +25,8 @@ class JofiLayoutGenerator < Rails::Generator::Base
         m.file     "stylesheet.css",  "public/stylesheets/#{file_name}.css"
         m.file     "header_left.gif",  "public/images/header_left.gif"
         m.file     "header_right.gif",  "public/images/header_right.gif"
-        m.file     "spinner.gif",  "public/images/header_banner.gif"
+        m.file     "header_banner.gif",  "public/images/header_banner.gif"        
+        m.file     "spinner.gif",  "public/images/spinner.gif"
         m.file     "sk_jofi_layout.yml",  "config/locales/sk_jofi_layout.yml"        
       end
       m.file "helper.rb", "app/helpers/layout_helper.rb"

@@ -1,0 +1,11 @@
+<%% render_searchmask do -%>
+<table cellspacing='3' cellpadding='3'>
+
+<tr>
+	<td><strong> <%%= t('activerecord.attributes.<%= singular_name %>.name').titleize %>:</strong></td>
+	<td><%%= text_field_tag('searchmask[magic]', @searchmask[:magic]) %></td>
+</tr>
+</table>
+
+<%% end -%>
+<p/>

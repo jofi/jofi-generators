@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "jofi-generators"
-  s.version     = "0.0.1"
+  s.version     = "0.0.2"
   s.author      = "Jozef Fulop"
   s.email       = "jofi@silake.com"
   s.homepage    = "http://github.com/jofi/jofi-generators"

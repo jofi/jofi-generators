@@ -80,6 +80,10 @@ class JofiScaffoldGenerator < Rails::Generator::Base
           m.template "views/#{view_language}/_form.html.#{view_language}", "app/views/#{plural_name}/_form.html.#{view_language}"
         end
       
+        m.template "views/#{view_language}/_list.html.#{view_language}", "app/views/#{plural_name}/_#{singular_name}_list.html.#{view_language}"
+        m.template "views/#{view_language}/_searchmask.html.#{view_language}", "app/views/#{plural_name}/_searchmask.html.#{view_language}"
+      
+      
         m.route_resources plural_name
         
         if rspec?
@@ -123,6 +127,10 @@ class JofiScaffoldGenerator < Rails::Generator::Base
   
   def plural_class_name
     plural_name.camelize
+  end
+  
+  def singular_class_name
+    singular_name.camelize
   end
   
   def controller_methods(dir_name)
