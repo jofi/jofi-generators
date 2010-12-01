@@ -15,7 +15,10 @@ sk:
     creation_successfull: Objekt úspešne vytvorený
     update_successfull: Objekt úspešne upravený
     destroy_successfull: Objekt odstránený
-
+    previous_page: <<<<<
+    next_page: >>>>>
+    count: Nájdených
+    
     # Model and Attribute names
     activerecord:
         models:                   

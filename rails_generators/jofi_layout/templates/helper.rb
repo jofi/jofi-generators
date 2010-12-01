@@ -5,7 +5,7 @@
 module LayoutHelper
   
   def pages(objects, options = {})
-    options[:prev_label] = t('previous_page')
+    options[:previous_label] = t('previous_page')
     options[:next_label] = t('next_page')
     res = '<br/>'
     p = will_paginate(objects, options) || '' 
@@ -23,7 +23,10 @@ module LayoutHelper
     concat("<img alt='spinner' id='spinner' src='/images/spinner.gif' style='display:none;' />")
     concat(observe_form(:searchmask, :frequency => 1, :update => :items, :loading => "Element.show('spinner')", :complete => "Element.hide('spinner')", :method => :get))      
   end
-    
+
+  def render_count(objects)
+    "<h4>#{t("count")}: #{objects.total_entries.to_s}</h4>"
+  end  
   
   def title(page_title, show_title = true)
     @content_for_title = page_title.to_s
