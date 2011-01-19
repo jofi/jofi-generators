@@ -1,6 +1,6 @@
 Description:
-  The nifty_layout generator creates a basic layout, stylesheet and
-  helper which will give some structure to a starting Rails app.
+  The jofi_layout generator (based on nifty layout generator from Ryan Bates) 
+  creates a basic layout, stylesheet and helper which will give some structure to a starting Rails app.
   
   The generator takes one argument which will be the name of the
 	layout and stylesheet files. If no argument is passed then it defaults
@@ -23,3 +23,18 @@ Examples:
         Layout:     app/views/layouts/admin.html.erb
         Stylesheet: public/stylesheets/admin.css
         Helper:     app/helpers/layout_helper.rb
+
+Important:
+  The generated code depends on the following:
+  - mislaw paginagition gem installed and present in the
+  
+  	config/environment.rb:	 
+  	  config.gem 'mislav-will_paginate', :version => '~> 2.3.2', :lib => 'will_paginate', 
+          :source => 'http://gems.github.com'
+  
+  	rake gems:install
+  	rake gems:unpack
+  	
+  - main_navigation and main_tabnav generated...
+  
+  	script/plugin install git://github.com/paolodona/rails-widgets.git  
